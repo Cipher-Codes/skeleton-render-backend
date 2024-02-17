@@ -11,7 +11,9 @@ app.get( "/", ( req, res) => {
 })
 
 
-app.get("/data", (req, res) => [
+app.get("/data", (req, res) => {
+
+    res.set('Access-Control-Allow-Origin', 'http://localhost:4200/');
 
     fs.readFile( dataURL, ( err, data) => {
         if(!err){
@@ -21,7 +23,7 @@ app.get("/data", (req, res) => [
         }
     })
 
-])
+})
 
 
 
