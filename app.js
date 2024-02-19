@@ -13,7 +13,7 @@ app.get( "/", ( req, res) => {
 
 app.get("/data", (req, res) => {
 
-    res.setHeader('Access-Control-Allow-Origin', 'http://localhost:4200');
+    res.setHeader('Access-Control-Allow-Origin', '*');
 
     fs.readFile( dataURL, ( err, data) => {
         if(!err){
